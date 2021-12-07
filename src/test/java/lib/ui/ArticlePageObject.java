@@ -162,11 +162,17 @@ abstract public class ArticlePageObject extends MainPageObject {
         {
             this.removeArticleFromMySavedIfItAdded();
         }
+
         this.waitForElementAndClick(
                 OPTIONS_ADD_TO_MY_LIST,
                 "cannot find option to save article to my saved articles",
                 5
         );
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public void removeArticleFromMySavedIfItAdded ()
@@ -174,6 +180,13 @@ abstract public class ArticlePageObject extends MainPageObject {
         if (this.isElementPresent(OPTIONS_REMOVE_FROM_MY_LIST)){
             this.waitForElementAndClick(OPTIONS_REMOVE_FROM_MY_LIST, "cannot find and click the remove from my list button", 1);
         }
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
 
         this.waitForElementPresent(OPTIONS_ADD_TO_MY_LIST, "cannot find the Add to my list button after removing article from my list", 1);
     }

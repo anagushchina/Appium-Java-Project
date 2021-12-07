@@ -28,7 +28,6 @@ public class MyListsTests extends CoreTestCase {
         ArticlePageObject ArticlePageObject = ArticlePageObjectFactory.get(driver);
         ArticlePageObject.waitForTitleToAppear();
 
-        //String article_title = ArticlePageObject.getArticleTitle();
         if (Platform.getInstance().isAndroid()){
             ArticlePageObject.addArticleToMyListForTheFirstTime(name_of_folder);
         } else {
@@ -46,7 +45,7 @@ public class MyListsTests extends CoreTestCase {
 
             ArticlePageObject.waitForTitleToAppear();
             String article_title = "Java (programming language)";
-            assertEquals("ddd", article_title, ArticlePageObject.getArticleTitle());
+            assertEquals("We are not on the same page after login", article_title, ArticlePageObject.getArticleTitle());
         }
 
         NavigationUI NavigationUI = NavigationUIFactory.get(driver);
@@ -72,17 +71,32 @@ public class MyListsTests extends CoreTestCase {
         SearchPageObject.initSearchInput();
         String search_line = "Java";
         SearchPageObject.typeSearchLine(search_line);
-        SearchPageObject.clickByArticleWithSubstring("Object-oriented programming language");
+        SearchPageObject.clickByArticleWithSubstring("bject-oriented programming language");
 
         //add the article to my list, create the first list, close the article
         ArticlePageObject ArticlePageObject = ArticlePageObjectFactory.get(driver);
         ArticlePageObject.waitForTitleToAppear();
+
+
         if (Platform.getInstance().isAndroid()){
             ArticlePageObject.addArticleToMyListForTheFirstTime(name_of_folder);
         } else {
             ArticlePageObject.addArticlesToMySaved();
         }
+
         ArticlePageObject.closeArticle();
+
+        if (Platform.getInstance().isMW())
+        {
+            AuthorizationPageObject AuthorizationPageObject = new AuthorizationPageObject(driver);
+            AuthorizationPageObject.clickAuthButton();
+            AuthorizationPageObject.enterLoginData(login, password);
+            AuthorizationPageObject.clickSubmitButton();
+
+            ArticlePageObject.waitForTitleToAppear();
+            String article_title = "Java (programming language)";
+            assertEquals("We are not on the same page after login", article_title, ArticlePageObject.getArticleTitle());
+        }
 
         //search and open another article
         SearchPageObject.initSearchInput();
@@ -96,7 +110,6 @@ public class MyListsTests extends CoreTestCase {
         //add the article to created list, close the article
         ArticlePageObject.waitForTitleToAppear();
 
-        //String second_article_title = ArticlePageObject.getArticleTitle();
         if (Platform.getInstance().isAndroid()) {
             ArticlePageObject.addArticleToExistingList(name_of_folder);
         } else {
@@ -106,11 +119,12 @@ public class MyListsTests extends CoreTestCase {
 
         //open My saved list
         NavigationUI NavigationUI = NavigationUIFactory.get(driver);
+        NavigationUI.openNavigation();
         NavigationUI.clickMyLists();
         MyListsPageObject myListPageObject = MyListsPageObjectFactory.get(driver);
         if (Platform.getInstance().isAndroid()) {
             myListPageObject.openFolderByMyName(name_of_folder);
-        } else {
+        } else if (Platform.getInstance().isIOS()) {
             myListPageObject.clickByDialogCloseButton();
         }
 
