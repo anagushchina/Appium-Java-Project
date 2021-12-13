@@ -1,5 +1,6 @@
 package lib.ui;
 
+import io.qameta.allure.Step;
 import lib.Platform;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -30,14 +31,17 @@ abstract public class ArticlePageObject extends MainPageObject {
         super(driver);
     }
 
+    @Step("Wait for title to appear on the article page")
     public WebElement waitForTitleToAppear()
     {
         return this.waitForElementPresent(TITLE_ELEMENT,"cannot find title element", 15);
     }
 
+    @Step("Get article title")
     public String getArticleTitle()
     {
         WebElement title_element = waitForTitleToAppear();
+        screenshot(this.takeScreenshot("article_title"));
         if (Platform.getInstance().isAndroid()) {
             return title_element.getAttribute("text");
         } else if (Platform.getInstance().isIOS()) {
@@ -47,6 +51,7 @@ abstract public class ArticlePageObject extends MainPageObject {
         }
     }
 
+    @Step("Scroll down the article page to footer")
     public void swipeToFooter()
     {
         if (Platform.getInstance().isAndroid()) {
@@ -58,6 +63,7 @@ abstract public class ArticlePageObject extends MainPageObject {
         }
     }
 
+    @Step("Add article to my list for the first time (for Android platform)")
     public void addArticleToMyListForTheFirstTime(String name_of_folder)
     {
         this.waitForElementAndClick(
@@ -104,6 +110,7 @@ abstract public class ArticlePageObject extends MainPageObject {
         );
     }
 
+    @Step("Add article to an existing list (for Android platform)")
     public void addArticleToExistingList(String name_of_folder)
     {
         this.waitForElementAndClick(
@@ -133,6 +140,7 @@ abstract public class ArticlePageObject extends MainPageObject {
         );
     }
 
+    @Step("Close the article")
     public void closeArticle()
     {
         if (Platform.getInstance().isAndroid() || Platform.getInstance().isIOS())
@@ -148,6 +156,7 @@ abstract public class ArticlePageObject extends MainPageObject {
 
     }
 
+    @Step("Ensure that article title is presented")
     public void assertArticleTitlePresent()
     {
         this.assertElementPresent(
@@ -156,6 +165,7 @@ abstract public class ArticlePageObject extends MainPageObject {
         );
     }
 
+    @Step("Add article to My Saved (for iOS and mobile web platforms")
     public void addArticlesToMySaved()
     {
         if (Platform.getInstance().isMW())
@@ -175,6 +185,7 @@ abstract public class ArticlePageObject extends MainPageObject {
         }
     }
 
+    @Step("Remove article from My Saved if it has been added (for mobile web platform")
     public void removeArticleFromMySavedIfItAdded ()
     {
         if (this.isElementPresent(OPTIONS_REMOVE_FROM_MY_LIST)){
@@ -186,7 +197,6 @@ abstract public class ArticlePageObject extends MainPageObject {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
 
         this.waitForElementPresent(OPTIONS_ADD_TO_MY_LIST, "cannot find the Add to my list button after removing article from my list", 1);
     }

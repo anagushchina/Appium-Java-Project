@@ -1,5 +1,7 @@
 package tests;
 
+import io.qameta.allure.*;
+import io.qameta.allure.junit4.DisplayName;
 import lib.CoreTestCase;
 import lib.Platform;
 import lib.ui.*;
@@ -10,6 +12,7 @@ import lib.ui.factories.SearchPageObjectFactory;
 import org.junit.Assert;
 import org.junit.Test;
 
+@Epic("Tests for articles")
 public class MyListsTests extends CoreTestCase {
 
     private static final String
@@ -18,6 +21,10 @@ public class MyListsTests extends CoreTestCase {
             password = "Qwerty!23";
 
     @Test
+    @Features(value = {@Feature(value="search"), @Feature(value = "Article"), @Feature(value = "Navigation"), @Feature(value = "Saving articles")})
+    @DisplayName("Save an article")
+    @Description("Open the 'Java (Object-oriented programming language)' article. Save the article (Android: to the 'Learning programming' list; iOS: to My Saved list; mobile_web: to the Watchlist). Open the list and delete the article from there")
+    @Step("Starting test testSaveFirstArticleToMyList")
     public void testSaveFirstArticleToMyList()
     {
         SearchPageObject SearchPageObject = SearchPageObjectFactory.get(driver);
@@ -45,7 +52,7 @@ public class MyListsTests extends CoreTestCase {
 
             ArticlePageObject.waitForTitleToAppear();
             String article_title = "Java (programming language)";
-            assertEquals("We are not on the same page after login", article_title, ArticlePageObject.getArticleTitle());
+            Assert.assertEquals("We are not on the same page after login", article_title, ArticlePageObject.getArticleTitle());
         }
 
         NavigationUI NavigationUI = NavigationUIFactory.get(driver);
@@ -64,6 +71,10 @@ public class MyListsTests extends CoreTestCase {
     }
 
     @Test
+    @Features(value = {@Feature(value="search"), @Feature(value = "Article"), @Feature(value = "Navigation"), @Feature(value = "Saving articles")})
+    @DisplayName("Save two articles")
+    @Description("Open two articles and save them (Android: to the 'Learning programming' list; iOS: to My Saved list; mobile_web: to the Watchlist). Open the list, delete one of the article from there and ensure that second article is still presented")
+    @Step("Starting test testSaveTwoArticlesToMyList")
     public void testSaveTwoArticlesToMyList()
     {
         //search and open an article
@@ -95,7 +106,7 @@ public class MyListsTests extends CoreTestCase {
 
             ArticlePageObject.waitForTitleToAppear();
             String article_title = "Java (programming language)";
-            assertEquals("We are not on the same page after login", article_title, ArticlePageObject.getArticleTitle());
+            Assert.assertEquals("We are not on the same page after login", article_title, ArticlePageObject.getArticleTitle());
         }
 
         //search and open another article

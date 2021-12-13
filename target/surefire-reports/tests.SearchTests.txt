@@ -1,0 +1,33 @@
+-------------------------------------------------------------------------------
+Test set: tests.SearchTests
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 20.246 s <<< FAILURE! - in tests.SearchTests
+testFindListOfArticlesAndCancelSearch(tests.SearchTests)  Time elapsed: 3.96 s  <<< ERROR!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=96.0.4664.93)
+Build info: version: '4.0.0-alpha-1', revision: 'd1d3728cae', time: '2019-04-24T13:42:21'
+System info: host: 'Anastasiias-MacBook-Pro.local', ip: 'fe80:0:0:0:8df:1eed:adfa:2f9e%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_262-internal'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.93, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: /var/folders/l2/f47v3xsx1ps...}, goog:chromeOptions: {debuggerAddress: localhost:49451}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9cc011830b12deba85b9046b2b2e1084
+	at tests.SearchTests.testFindListOfArticlesAndCancelSearch_aroundBody8(SearchTests.java:93)
+	at tests.SearchTests.testFindListOfArticlesAndCancelSearch(SearchTests.java:85)
+
+testFindListOfThreeArticles(tests.SearchTests)  Time elapsed: 2.694 s  <<< ERROR!
+java.lang.NullPointerException
+	at tests.SearchTests.testFindListOfThreeArticles_aroundBody10(SearchTests.java:113)
+	at tests.SearchTests.testFindListOfThreeArticles(SearchTests.java:104)
+
+testCancelSearch(tests.SearchTests)  Time elapsed: 2.522 s  <<< ERROR!
+org.openqa.selenium.ElementNotInteractableException: 
+element not interactable
+  (Session info: chrome=96.0.4664.93)
+Build info: version: '4.0.0-alpha-1', revision: 'd1d3728cae', time: '2019-04-24T13:42:21'
+System info: host: 'Anastasiias-MacBook-Pro.local', ip: 'fe80:0:0:0:8df:1eed:adfa:2f9e%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_262-internal'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.93, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: /var/folders/l2/f47v3xsx1ps...}, goog:chromeOptions: {debuggerAddress: localhost:49524}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 352f24f38946d15b41c1f736ac305af7
+	at tests.SearchTests.testCancelSearch_aroundBody2(SearchTests.java:39)
+	at tests.SearchTests.testCancelSearch(SearchTests.java:36)
+

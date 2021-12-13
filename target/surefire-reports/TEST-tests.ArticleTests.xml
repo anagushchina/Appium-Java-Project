@@ -1,60 +1,67 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="tests.ArticleTests" time="21.902" errors="0" skipped="0">
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="tests.ArticleTests" time="13.241" tests="3" errors="0" skipped="0" failures="0">
   <properties>
-    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
-    <property name="java.vm.version" value="17+35-LTS-2724"/>
-    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home/lib"/>
-    <property name="maven.multiModuleProjectDirectory" value="/Users/ana/JavaAppium"/>
-    <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="java.vendor.url" value="https://java.oracle.com/"/>
-    <property name="guice.disable.misplaced.annotation.check" value="true"/>
-    <property name="path.separator" value=":"/>
-    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/ana/JavaAppium/target/test-classes:/Users/ana/JavaAppium/target/classes:/Users/ana/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/ana/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/ana/.m2/repository/io/appium/java-client/7.1.0/java-client-7.1.0.jar:/Users/ana/.m2/repository/org/seleniumhq/selenium/selenium-java/4.0.0-alpha-1/selenium-java-4.0.0-alpha-1.jar:/Users/ana/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.0.0-alpha-1/selenium-chrome-driver-4.0.0-alpha-1.jar:/Users/ana/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.0.0-alpha-1/selenium-edge-driver-4.0.0-alpha-1.jar:/Users/ana/.m2/repository/org/seleniumhq/selenium/selenium-firefox-xpi-driver/4.0.0-alpha-1/selenium-firefox-xpi-driver-4.0.0-alpha-1.jar:/Users/ana/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.0.0-alpha-1/selenium-firefox-driver-4.0.0-alpha-1.jar:/Users/ana/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.0.0-alpha-1/selenium-ie-driver-4.0.0-alpha-1.jar:/Users/ana/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/4.0.0-alpha-1/selenium-opera-driver-4.0.0-alpha-1.jar:/Users/ana/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.0.0-alpha-1/selenium-safari-driver-4.0.0-alpha-1.jar:/Users/ana/.m2/repository/org/seleniumhq/selenium/selenium-support/4.0.0-alpha-1/selenium-support-4.0.0-alpha-1.jar:/Users/ana/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.0.0-alpha-1/selenium-remote-driver-4.0.0-alpha-1.jar:/Users/ana/.m2/repository/net/bytebuddy/byte-buddy/1.9.12/byte-buddy-1.9.12.jar:/Users/ana/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/ana/.m2/repository/com/google/guava/guava/27.1-jre/guava-27.1-jre.jar:/Users/ana/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/ana/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/ana/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/ana/.m2/repository/org/checkerframework/checker-qual/2.5.2/checker-qual-2.5.2.jar:/Users/ana/.m2/repository/com/google/errorprone/error_prone_annotations/2.2.0/error_prone_annotations-2.2.0.jar:/Users/ana/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/Users/ana/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.17/animal-sniffer-annotations-1.17.jar:/Users/ana/.m2/repository/com/squareup/okhttp3/okhttp/3.14.0/okhttp-3.14.0.jar:/Users/ana/.m2/repository/com/squareup/okio/okio/1.17.2/okio-1.17.2.jar:/Users/ana/.m2/repository/org/seleniumhq/selenium/selenium-api/4.0.0-alpha-1/selenium-api-4.0.0-alpha-1.jar:/Users/ana/.m2/repository/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar:/Users/ana/.m2/repository/org/apache/httpcomponents/httpclient/4.5.8/httpclient-4.5.8.jar:/Users/ana/.m2/repository/org/apache/httpcomponents/httpcore/4.4.11/httpcore-4.4.11.jar:/Users/ana/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/ana/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/ana/.m2/repository/cglib/cglib/3.2.10/cglib-3.2.10.jar:/Users/ana/.m2/repository/org/ow2/asm/asm/7.0/asm-7.0.jar:/Users/ana/.m2/repository/org/apache/ant/ant/1.10.3/ant-1.10.3.jar:/Users/ana/.m2/repository/org/apache/ant/ant-launcher/1.10.3/ant-launcher-1.10.3.jar:/Users/ana/.m2/repository/commons-validator/commons-validator/1.6/commons-validator-1.6.jar:/Users/ana/.m2/repository/commons-beanutils/commons-beanutils/1.9.2/commons-beanutils-1.9.2.jar:/Users/ana/.m2/repository/commons-digester/commons-digester/1.8.1/commons-digester-1.8.1.jar:/Users/ana/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/Users/ana/.m2/repository/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.jar:/Users/ana/.m2/repository/commons-io/commons-io/2.6/commons-io-2.6.jar:/Users/ana/.m2/repository/org/springframework/spring-context/5.1.6.RELEASE/spring-context-5.1.6.RELEASE.jar:/Users/ana/.m2/repository/org/springframework/spring-aop/5.1.6.RELEASE/spring-aop-5.1.6.RELEASE.jar:/Users/ana/.m2/repository/org/springframework/spring-beans/5.1.6.RELEASE/spring-beans-5.1.6.RELEASE.jar:/Users/ana/.m2/repository/org/springframework/spring-core/5.1.6.RELEASE/spring-core-5.1.6.RELEASE.jar:/Users/ana/.m2/repository/org/springframework/spring-jcl/5.1.6.RELEASE/spring-jcl-5.1.6.RELEASE.jar:/Users/ana/.m2/repository/org/springframework/spring-expression/5.1.6.RELEASE/spring-expression-5.1.6.RELEASE.jar:/Users/ana/.m2/repository/io/qameta/allure/allure-junit4/2.8.1/allure-junit4-2.8.1.jar:/Users/ana/.m2/repository/io/qameta/allure/allure-java-commons/2.8.1/allure-java-commons-2.8.1.jar:/Users/ana/.m2/repository/io/qameta/allure/allure-model/2.8.1/allure-model-2.8.1.jar:/Users/ana/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.7/jackson-databind-2.9.7.jar:/Users/ana/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar:/Users/ana/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.7/jackson-core-2.9.7.jar:/Users/ana/.m2/repository/org/apache/tika/tika-core/1.19.1/tika-core-1.19.1.jar:/Users/ana/.m2/repository/org/aspectj/aspectjrt/1.9.1/aspectjrt-1.9.1.jar:/Users/ana/.m2/repository/org/jooq/joor-java-8/0.9.9/joor-java-8-0.9.9.jar:/Users/ana/.m2/repository/org/aspectj/aspectjweaver/1.9.5/aspectjweaver-1.9.5.jar:/Users/ana/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/Users/ana/.m2/repository/org/slf4j/slf4j-log4j12/1.7.30/slf4j-log4j12-1.7.30.jar:/Users/ana/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:"/>
+    <property name="java.vm.vendor" value="OpenLogic-OpenJDK"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value=""/>
+    <property name="user.country.format" value="EE"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Mac OS X"/>
     <property name="user.country" value="GB"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="test" value="ArticleTests#testCompareArticleTitle"/>
-    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/Users/ana/JavaAppium"/>
-    <property name="java.vm.compressedOopsMode" value="Zero based"/>
-    <property name="java.runtime.version" value="17+35-LTS-2724"/>
-    <property name="os.arch" value="x86_64"/>
-    <property name="java.io.tmpdir" value="/var/folders/l2/f47v3xsx1ps96fqw05ydk27w0000gn/T/"/>
-    <property name="line.separator" value="
-"/>
-    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="os.name" value="Mac OS X"/>
-    <property name="classworlds.conf" value="//Users/ana/maven/bin/m2.conf"/>
-    <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.library.path" value="/Users/ana/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
-    <property name="maven.conf" value="//Users/ana/maven/conf"/>
-    <property name="jdk.debug" value="release"/>
-    <property name="java.class.version" value="61.0"/>
-    <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="12.0.1"/>
-    <property name="library.jansi.path" value="//Users/ana/maven/lib/jansi-native"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/openlogic-openjdk-8.jdk/Contents/Home/jre/lib"/>
+    <property name="sun.java.command" value="/Users/ana/JavaAppium/target/surefire/surefirebooter576897445446331070.jar /Users/ana/JavaAppium/target/surefire 2021-12-13T16-53-34_334-jvmRun1 surefire7082570501657092148tmp surefire_05659105802876631284tmp"/>
+    <property name="test" value="ArticleTests"/>
+    <property name="surefire.test.class.path" value="/Users/ana/JavaAppium/target/test-classes:/Users/ana/JavaAppium/target/classes:/Users/ana/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/ana/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/ana/.m2/repository/io/appium/java-client/7.1.0/java-client-7.1.0.jar:/Users/ana/.m2/repository/org/seleniumhq/selenium/selenium-java/4.0.0-alpha-1/selenium-java-4.0.0-alpha-1.jar:/Users/ana/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.0.0-alpha-1/selenium-chrome-driver-4.0.0-alpha-1.jar:/Users/ana/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.0.0-alpha-1/selenium-edge-driver-4.0.0-alpha-1.jar:/Users/ana/.m2/repository/org/seleniumhq/selenium/selenium-firefox-xpi-driver/4.0.0-alpha-1/selenium-firefox-xpi-driver-4.0.0-alpha-1.jar:/Users/ana/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.0.0-alpha-1/selenium-firefox-driver-4.0.0-alpha-1.jar:/Users/ana/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.0.0-alpha-1/selenium-ie-driver-4.0.0-alpha-1.jar:/Users/ana/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/4.0.0-alpha-1/selenium-opera-driver-4.0.0-alpha-1.jar:/Users/ana/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.0.0-alpha-1/selenium-safari-driver-4.0.0-alpha-1.jar:/Users/ana/.m2/repository/org/seleniumhq/selenium/selenium-support/4.0.0-alpha-1/selenium-support-4.0.0-alpha-1.jar:/Users/ana/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.0.0-alpha-1/selenium-remote-driver-4.0.0-alpha-1.jar:/Users/ana/.m2/repository/net/bytebuddy/byte-buddy/1.9.12/byte-buddy-1.9.12.jar:/Users/ana/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/ana/.m2/repository/com/google/guava/guava/27.1-jre/guava-27.1-jre.jar:/Users/ana/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/ana/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/ana/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/ana/.m2/repository/org/checkerframework/checker-qual/2.5.2/checker-qual-2.5.2.jar:/Users/ana/.m2/repository/com/google/errorprone/error_prone_annotations/2.2.0/error_prone_annotations-2.2.0.jar:/Users/ana/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/Users/ana/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.17/animal-sniffer-annotations-1.17.jar:/Users/ana/.m2/repository/com/squareup/okhttp3/okhttp/3.14.0/okhttp-3.14.0.jar:/Users/ana/.m2/repository/com/squareup/okio/okio/1.17.2/okio-1.17.2.jar:/Users/ana/.m2/repository/org/seleniumhq/selenium/selenium-api/4.0.0-alpha-1/selenium-api-4.0.0-alpha-1.jar:/Users/ana/.m2/repository/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar:/Users/ana/.m2/repository/org/apache/httpcomponents/httpclient/4.5.8/httpclient-4.5.8.jar:/Users/ana/.m2/repository/org/apache/httpcomponents/httpcore/4.4.11/httpcore-4.4.11.jar:/Users/ana/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/ana/.m2/repository/commons-codec/commons-codec/1.11/commons-codec-1.11.jar:/Users/ana/.m2/repository/cglib/cglib/3.2.10/cglib-3.2.10.jar:/Users/ana/.m2/repository/org/ow2/asm/asm/7.0/asm-7.0.jar:/Users/ana/.m2/repository/org/apache/ant/ant/1.10.3/ant-1.10.3.jar:/Users/ana/.m2/repository/org/apache/ant/ant-launcher/1.10.3/ant-launcher-1.10.3.jar:/Users/ana/.m2/repository/commons-validator/commons-validator/1.6/commons-validator-1.6.jar:/Users/ana/.m2/repository/commons-beanutils/commons-beanutils/1.9.2/commons-beanutils-1.9.2.jar:/Users/ana/.m2/repository/commons-digester/commons-digester/1.8.1/commons-digester-1.8.1.jar:/Users/ana/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/Users/ana/.m2/repository/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.jar:/Users/ana/.m2/repository/commons-io/commons-io/2.6/commons-io-2.6.jar:/Users/ana/.m2/repository/org/springframework/spring-context/5.1.6.RELEASE/spring-context-5.1.6.RELEASE.jar:/Users/ana/.m2/repository/org/springframework/spring-aop/5.1.6.RELEASE/spring-aop-5.1.6.RELEASE.jar:/Users/ana/.m2/repository/org/springframework/spring-beans/5.1.6.RELEASE/spring-beans-5.1.6.RELEASE.jar:/Users/ana/.m2/repository/org/springframework/spring-core/5.1.6.RELEASE/spring-core-5.1.6.RELEASE.jar:/Users/ana/.m2/repository/org/springframework/spring-jcl/5.1.6.RELEASE/spring-jcl-5.1.6.RELEASE.jar:/Users/ana/.m2/repository/org/springframework/spring-expression/5.1.6.RELEASE/spring-expression-5.1.6.RELEASE.jar:/Users/ana/.m2/repository/io/qameta/allure/allure-junit4/2.8.1/allure-junit4-2.8.1.jar:/Users/ana/.m2/repository/io/qameta/allure/allure-java-commons/2.8.1/allure-java-commons-2.8.1.jar:/Users/ana/.m2/repository/io/qameta/allure/allure-model/2.8.1/allure-model-2.8.1.jar:/Users/ana/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.7/jackson-databind-2.9.7.jar:/Users/ana/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar:/Users/ana/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.7/jackson-core-2.9.7.jar:/Users/ana/.m2/repository/org/apache/tika/tika-core/1.19.1/tika-core-1.19.1.jar:/Users/ana/.m2/repository/org/aspectj/aspectjrt/1.9.1/aspectjrt-1.9.1.jar:/Users/ana/.m2/repository/org/jooq/joor-java-8/0.9.9/joor-java-8-0.9.9.jar:/Users/ana/.m2/repository/org/aspectj/aspectjweaver/1.9.5/aspectjweaver-1.9.5.jar:/Users/ana/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/Users/ana/.m2/repository/org/slf4j/slf4j-log4j12/1.7.30/slf4j-log4j12-1.7.30.jar:/Users/ana/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="allure.results.directory" value="/Users/ana/JavaAppium/target/allure-results"/>
     <property name="user.home" value="/Users/ana"/>
-    <property name="user.timezone" value="Europe/Tallinn"/>
-    <property name="file.encoding" value="UTF-8"/>
-    <property name="java.specification.version" value="17"/>
-    <property name="user.name" value="ana"/>
-    <property name="java.class.path" value="//Users/ana/maven/boot/plexus-classworlds-2.6.0.jar"/>
-    <property name="java.vm.specification.version" value="17"/>
-    <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=ArticleTests#testCompareArticleTitle test"/>
-    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.vm.info" value="mixed mode, sharing"/>
-    <property name="java.version" value="17"/>
-    <property name="native.encoding" value="UTF-8"/>
-    <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="/Users/ana/maven"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/openlogic-openjdk-8.jdk/Contents/Home/jre"/>
+    <property name="basedir" value="/Users/ana/JavaAppium"/>
     <property name="file.separator" value="/"/>
-    <property name="java.version.date" value="2021-09-14"/>
-    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/Users/ana/JavaAppium/target/surefire/surefirebooter576897445446331070.jar:/Users/ana/.m2/repository/org/aspectj/aspectjweaver/1.9.5/aspectjweaver-1.9.5.jar"/>
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/openlogic-openjdk-8.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/openlogic-openjdk-8.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/openlogic-openjdk-8.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/openlogic-openjdk-8.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/openlogic-openjdk-8.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/openlogic-openjdk-8.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/openlogic-openjdk-8.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/openlogic-openjdk-8.jdk/Contents/Home/jre/classes"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_262-internal-b10"/>
+    <property name="user.name" value="ana"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="10.16"/>
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/openlogic-openjdk-8.jdk/Contents/Home/jre/lib/endorsed"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/Users/ana/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/l2/f47v3xsx1ps96fqw05ydk27w0000gn/T/"/>
+    <property name="java.version" value="1.8.0_262-internal"/>
+    <property name="user.dir" value="/Users/ana/JavaAppium"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/Users/ana/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="OpenLogic-OpenJDK"/>
+    <property name="java.vm.version" value="25.262-b10"/>
+    <property name="java.ext.dirs" value="/Users/ana/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/openlogic-openjdk-8.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
-    <property name="sun.cpu.endian" value="little"/>
+    <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase classname="tests.ArticleTests" name="testCompareArticleTitle" time="21.902"/>
+  <testcase name="testCompareArticleTitle" classname="tests.ArticleTests" time="4.524"/>
+  <testcase name="testAssertArticleTitlePresent" classname="tests.ArticleTests" time="4.219"/>
+  <testcase name="testSwipeArticle" classname="tests.ArticleTests" time="4.355"/>
 </testsuite>
